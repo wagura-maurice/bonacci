@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class NetworkProvidentem extends Model
 {
     use HasFactory;
+
+    const PENDING = 'pendeat';
+    const ACTIVE = 'active';
+    const INACTIVE = 'inactive';
 }

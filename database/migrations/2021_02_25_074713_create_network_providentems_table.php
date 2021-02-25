@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\NetworkProvidentem;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateNetworkProvidentemsTable extends Migration
 {
@@ -15,6 +16,9 @@ class CreateNetworkProvidentemsTable extends Migration
     {
         Schema::create('network_providentems', function (Blueprint $table) {
             $table->id();
+            $table->sting('name');
+            $table->sting('_code')->nullable();
+            $table->string('_status')->default(NetworkProvidentem::PENDING);
             $table->timestamps();
         });
     }
