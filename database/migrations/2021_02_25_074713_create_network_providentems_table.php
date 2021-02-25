@@ -16,8 +16,8 @@ class CreateNetworkProvidentemsTable extends Migration
     {
         Schema::create('network_providentems', function (Blueprint $table) {
             $table->id();
-            $table->sting('name');
-            $table->sting('_code')->nullable();
+            $table->string('name');
+            $table->string('_code')->nullable();
             $table->string('_status')->default(NetworkProvidentem::PENDING);
             $table->timestamps();
         });
