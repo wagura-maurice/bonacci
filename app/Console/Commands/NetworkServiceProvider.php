@@ -58,6 +58,7 @@ class NetworkServiceProvider extends Command
                 if ($mobileProvider) {
                     $networkProvider = NetworkProvidentem::whereName($mobileProvider)->first();
                     $contact->networkId = optional($networkProvider)->id;
+                    $contact->_status = Contactu::ACTIVE;
                     $contact->save();
                 }
             }
